@@ -1,7 +1,8 @@
 const zookeeper = require('node-zookeeper-client'); //utilise le module zookeeper
 
 const client = zookeeper.createClient('localhost:2181'); //crée un client zookeeper
-const path = '/happy/db'; //crée un path
+const path = '/happy'; //crée un path
+// const path = '/happy/db'; //crée un children du znonde
 
 client.once('connected', function () { //quand le client est connecté
     console.log('Connected to the server.');
